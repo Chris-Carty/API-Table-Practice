@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Table of APIs</title>
+    <meta name="author" content="Chris Carty" />
+    <meta name="description" content="Table of APIs" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="vendors/bootstrap/bootstrap.min.css" />
+    <link rel="icon" href="favicon.png" />
+  </head>
+
+  <body>
+
+  <div class="main">
+
+    <div id="apiTable">
+      <h1>Chris Carty | Table of APIs</h1>
+      </br>
+
+      <table class="api-table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">API name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Parameter(s)</th>
+            <th scope="col">Submit</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <tr>
+            <th scope="row">1</th>
+            <td>Weather Station</td>
+            <td>Returns the most recent weather observations at a chosen weather station</td>
+            <td>
+              <select id="selICAO">
+              <option value="LSZH">Zurich</option>
+              <option value="EGLC">London</option>
+              <option value="KJFK">New York</option>
+              <option value="OMDB">Dubai</option>
+              </select>
+            </td>
+            <td><button id="btnWeatherStation">Submit</button></td>
+          </tr>
+
+
+          <tr>
+            <th scope="row">2</th>
+            <td>Timezone</td>
+            <td>Returns the Sunrise/Sunset time in Greenwich on the input date</td>
+            <td>
+              <label for="date">Date (yyyy-mm-dd):</label></br>
+              <input type="text" id="inputDate" name="date" minlength="10" maxlength="10">
+            </td>
+            <td><button id="btnTimezone">Submit</button></td>
+          </tr>
+
+
+          <tr>
+            <th scope="row">3</th>
+            <td>Earthquakes</td>
+            <td>Returns the three largest magnitude earthquakes in Japan</td>
+            <td>N/A</td>
+            <td><button id="btnEarthquake">Submit</button></td>
+          </tr>
+
+
+        </tbody>
+      </table>
+    </div>
+
+    </br>
+
+    <div id="divResults">
+      <h1>Results</h1>
+
+      </br>
+
+      <h2>Weather Station</h2>
+      
+      <table class="Weather-Station-Results table-striped">
+        <tr>
+          <td align="right">Datetime:</td>
+          <td id="txtDatetime"></td>
+        </tr>
+        <tr>
+          <td align="right">Station Name:</td>
+          <td id="txtStationName"></td>
+        </tr>
+        <tr>
+          <td align="right">Temperature (Celsius):</td>
+          <td id="txtTemperature"></td>
+        </tr>
+        <tr>
+          <td align="right">Wind Speed (Knots):</td>
+          <td id="txtWind"></td>
+        </tr>
+        <tr>
+          <td align="right">Clouds:</td>
+          <td id="txtClouds"></td>
+        </tr>
+      </table>
+
+      </br>
+      
+      <h2>Timezone</h2>
+    
+      <table class="timezone-Results table-striped">
+        <tr>
+          <td align="right">Sunrise:</td>
+          <td id="txtSunrise"></td>
+        </tr>
+        <tr>
+          <td align="right">Sunset:</td>
+          <td id="txtSunset"></td>
+        </tr>
+      </table>
+
+
+      </br>
+      
+      <h2>Earthquakes</h2>
+      
+      <table class="timezone-Results table-striped">
+        <thead>
+          <tr>
+            <th scope="col">1.</th>
+          </tr>
+        </thead>
+        <tr>
+          <td align="right">Datetime:</td>
+          <td id="txtDatetime1"></td>
+        </tr>
+        <tr>
+          <td align="right">Magnitude:</td>
+          <td id="txtMagnitude1"></td>
+        </tr>
+      </table>
+
+      <table class="timezone-Results table-striped">
+        <thead>
+          <tr>
+            <th scope="col">2.</th>
+          </tr>
+        </thead>
+        <tr>
+          <td align="right">Datetime:</td>
+          <td id="txtDatetime2"></td>
+        </tr>
+        <tr>
+          <td align="right">Magnitude:</td>
+          <td id="txtMagnitude2"></td>
+        </tr>
+      </table>
+
+      <table class="timezone-Results table-striped">
+        <thead>
+          <tr>
+            <th scope="col">3.</th>
+          </tr>
+        </thead>
+        <tr>
+          <td align="right">Datetime:</td>
+          <td id="txtDatetime3"></td>
+        </tr>
+        <tr>
+          <td align="right">Magnitude:</td>
+          <td id="txtMagnitude3"></td>
+        </tr>
+      </table>
+
+
+    </div>
+
+  </div>
+
+  <div id="”preloader”"></div>
+
+  <script type="application/javascript" src="vendors/jquery/jquery-3.5.1.min.js"></script>
+  <script type="application/javascript" src="JS/script.js"></script>
+
+  </body>
+</html>

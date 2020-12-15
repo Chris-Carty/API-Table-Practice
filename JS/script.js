@@ -32,7 +32,9 @@ $("#btnWeatherStation").click(function () {
       }
     },
     error: function (jqXHR, textStatus, errorThrown) {
-      // your error code
+      console.log(jqXHR.status);
+      console.log(textStatus);
+      console.log(errorThrown);
     },
   });
 });
@@ -58,7 +60,9 @@ $("#btnTimezone").click(function () {
       }
     },
     error: function (jqXHR, textStatus, errorThrown) {
-      // your error code
+      console.log(jqXHR.status);
+      console.log(textStatus);
+      console.log(errorThrown);
     },
   });
 });
@@ -89,7 +93,9 @@ $("#btnEarthquake").click(function () {
       }
     },
     error: function (jqXHR, textStatus, errorThrown) {
-      // your error code
+      console.log(jqXHR.status);
+      console.log(textStatus);
+      console.log(errorThrown);
     },
   });
 });
